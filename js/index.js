@@ -4,8 +4,9 @@ var API_ENDPOINT = "https://5uqk927m6e.execute-api.us-east-1.amazonaws.com/prod"
 // AJAX POST request to save student data
 document.getElementById("saveIncident").onclick = function(){
     const randomNumber = Math.floor(Math.random() * 1000); // Random
+    var incidentid = randomNumber.toString();
     var inputData = {
-        "incidentid": randomNumber,
+        "incidentid": incidentid,
         "title": $('#title').val(),
         "date": $('#date').val(),
         "description": $('#description').val()
