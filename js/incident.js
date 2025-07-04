@@ -1,4 +1,6 @@
 // Load incidents on page load
+var API_ENDPOINT = "https://5uqk927m6e.execute-api.us-east-1.amazonaws.com/prod";
+
 $(document).ready(function() {
     $.ajax({
       url: API_ENDPOINT,
