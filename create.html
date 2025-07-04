@@ -41,31 +41,32 @@
           <form class="bg-white p-4 rounded shadow-sm">
             <div class="mb-3">
               <label for="incidentTitle" class="form-label">Incident Title</label>
-              <input type="text" class="form-control" id="incidentTitle" placeholder="e.g., Equipment Malfunction - Crane">
+              <input type="text" class="form-control" id="title" placeholder="e.g., Equipment Malfunction - Crane">
             </div>
 
             <div class="mb-3">
               <label for="incidentDate" class="form-label">Date of Incident</label>
-              <input type="date" class="form-control" id="incidentDate">
+              <input type="date" class="form-control" id="date">
             </div>
 
             <div class="mb-3">
               <label for="incidentLocation" class="form-label">Location</label>
-              <input type="text" class="form-control" id="incidentLocation" placeholder="e.g., North Sector, near Warehouse A">
+              <input type="text" class="form-control" id="location" placeholder="e.g., North Sector, near Warehouse A">
             </div>
 
             <div class="mb-3">
               <label for="incidentDescription" class="form-label">Description</label>
-              <textarea class="form-control" id="incidentDescription" rows="4" placeholder="Provide a detailed description of the incident..."></textarea>
+              <textarea class="form-control" id="description" rows="4" placeholder="Provide a detailed description of the incident..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Submit Incident</button>
+            <button type="submit" class="btn btn-primary w-100" id="saveIncident">Submit Incident</button>
+            <p id="incidentSaved"></p>
           </form>
         </div>
       </div>
     </div>
   </section>
     <script src="js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 </body>
 </html>
