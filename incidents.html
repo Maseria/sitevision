@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="index.html">SITEVISION</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="justify-content-end collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="incidents.html" id="navLink">Incidents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="create.html" id="navLink">Create Incident</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#">Login</a>
+                </li> -->
+              </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- Incident List Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">All Incidents</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+
+          <!-- Incident Card -->
+          <div class="border rounded p-3 mb-3 shadow-sm">
+            <div class="d-flex justify-content-between">
+              <strong>Equipment Malfunction - Crane</strong>
+              <small class="text-muted">2023-10-26</small>
+            </div>
+            <p class="mb-0 text-muted">Crane experienced hydraulic failure during lifting operation. No injuries reported, but work halted for inspection and repair. Area secured.</p>
+          </div>
+
+          <div class="border rounded p-3 mb-3 shadow-sm">
+            <div class="d-flex justify-content-between">
+              <strong>Minor Fall - Scaffolding Area</strong>
+              <small class="text-muted">2023-10-25</small>
+            </div>
+            <p class="mb-0 text-muted">Worker slipped on wet scaffolding plank, fell approximately 3 feet. Sustained minor sprain to ankle. First aid administered, worker sent for medical check-up.</p>
+          </div>
+
+          <div class="border rounded p-3 mb-3 shadow-sm">
+            <div class="d-flex justify-content-between">
+              <strong>Material Spill - Concrete Mix</strong>
+              <small class="text-muted">2023-10-24</small>
+            </div>
+            <p class="mb-0 text-muted">Accidental spill of wet concrete mix near foundation pour. Area immediately cordoned off and clean-up initiated. No environmental impact.</p>
+          </div>
+
+          <div class="border rounded p-3 mb-3 shadow-sm">
+            <div class="d-flex justify-content-between">
+              <strong>Near Miss - Falling Debris</strong>
+              <small class="text-muted">2023-10-23</small>
+            </div>
+            <p class="mb-0 text-muted">Small piece of debris fell from upper level, narrowly missing a worker below. Safety netting to be reinforced in the area. Incident reviewed with team.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+    <script src="js/index.js"></script>
+</body>
+</html>

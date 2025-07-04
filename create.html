@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="index.html">SITEVISION</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="justify-content-end collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="incidents.html" id="navLink">Incidents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="create.html" id="navLink">Create Incident</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#">Login</a>
+                </li> -->
+              </ul>
+          </div>
+        </div>
+    </nav>
+     <!-- Create Incident Form -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Create New Incident</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <form class="bg-white p-4 rounded shadow-sm">
+            <div class="mb-3">
+              <label for="incidentTitle" class="form-label">Incident Title</label>
+              <input type="text" class="form-control" id="incidentTitle" placeholder="e.g., Equipment Malfunction - Crane">
+            </div>
+
+            <div class="mb-3">
+              <label for="incidentDate" class="form-label">Date of Incident</label>
+              <input type="date" class="form-control" id="incidentDate">
+            </div>
+
+            <div class="mb-3">
+              <label for="incidentLocation" class="form-label">Location</label>
+              <input type="text" class="form-control" id="incidentLocation" placeholder="e.g., North Sector, near Warehouse A">
+            </div>
+
+            <div class="mb-3">
+              <label for="incidentDescription" class="form-label">Description</label>
+              <textarea class="form-control" id="incidentDescription" rows="4" placeholder="Provide a detailed description of the incident..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Submit Incident</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
