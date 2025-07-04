@@ -9,6 +9,7 @@ document.getElementById("saveIncident").onclick = function(){
         "date": $('#date').val(),
         "description": $('#description').val()
     };
+    console.log(inputData);
     $.ajax({
         url: API_ENDPOINT,
         type: 'POST',
@@ -16,6 +17,7 @@ document.getElementById("saveIncident").onclick = function(){
         contentType: 'application/json; charset=utf-8',
         success: function (response) {
             document.getElementById("incidentSaved").innerHTML = "Incident Data Saved";
+            console.log("We saved the data")
         },
         error: function () {
             alert("Error saving student data.");
