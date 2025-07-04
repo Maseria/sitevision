@@ -26,3 +26,30 @@ document.getElementById("saveIncident").onclick = function(){
         }
     });
 }
+// Load incidents on page load
+$(document).ready(function() {
+    $.ajax({
+      url: API_ENDPOINT,
+      type: 'GET',
+      contentType: 'application/json; charset=utf-8',
+      success: function (response) {
+        $('#incidentList').empty();
+        jQuery.each(response, function(i, data) {
+          $('#incidentList').append(`
+            <div class="col-md-10 col-lg-8 mb-3">
+              <div class="border rounded p-3 bg-white shadow-sm">
+                <div class="d-flex justify-content-between">
+                  <strong>${data.title}</strong>
+                  <small class="text-muted">${data.date}</small>
+                </div>
+                <p class="mb-0 text-muted">${data.description}</p>
+              </div>
+            </div>
+          `);
+        });
+      },
+      error: function () {
+        $('#incidentList').html("<p class='text-danger'>Error loading incidents.</p>");
+      }
+    });
+  });
