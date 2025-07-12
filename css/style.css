@@ -2,6 +2,9 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url('../svback.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 .hero {
     flex: 1;
@@ -10,3 +13,35 @@ body {
     align-items: center;
     text-align: center;
 }
+
+.navbar-brand {
+    margin: 8px;
+    font-weight: bold;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand:hover,.nav-link:hover {
+    color: blue;
+}
+
+a.nav-link {
+    color:white;
+}
+.form-label {
+    font-weight: 400;
+}
+.create-form {
+    background-color: rgb(153, 153, 153);
+}
+
+.nav-link {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.form-label {
+    font-weight: 400;
+}
+
+
