@@ -17,6 +17,7 @@ $(document).ready(function() {
                   <small class="text-muted">${data.date}</small>
                 </div>
                 <p class="mb-0 text-muted">${data.description}</p>
+                <button class="btn btn-sm btn-danger" onclick="deleteIncident('${data.incidentid}'>Delete</button>
               </div>
             </div>
           `);
@@ -27,3 +28,16 @@ $(document).ready(function() {
       }
     });
   });
+
+  function deleteIncident(incidentId) {
+    $.ajax({
+      url: `${API_ENDPOINT}?incidentId=${incidentId}`,
+      type: 'DELETE',
+      success: function () {
+        $(`#incident-${incidentId}`).remove();
+      },
+      error: function () {
+        alert("Failed to delete incident.");
+      }
+    });
+  }
