@@ -1,7 +1,7 @@
 // Add your API endpoint here
 var API_ENDPOINT = "https://5uqk927m6e.execute-api.us-east-1.amazonaws.com/prod";
 
-// AJAX POST request to save student data
+// AJAX POST request to save incident data
 document.getElementById("saveIncident").onclick = function(){
     const incidentid = String(Math.floor(Math.random() * 1000)); // Random
     
