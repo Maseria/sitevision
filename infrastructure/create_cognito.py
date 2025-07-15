@@ -18,4 +18,3 @@ def setup_user_pool():
     print("✅ Client ID:", client_id)
     return pool_id, client_id
 
-setup_user_pool()

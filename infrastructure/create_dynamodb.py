@@ -15,4 +15,3 @@ def create_incident_table():
         print("⚠️ Table already exists.")
 
 
-create_incident_table()
