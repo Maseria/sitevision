@@ -39,16 +39,18 @@ def add_lambda_route(function_name, method):
 
     lambda_client.add_permission(
         FunctionName=function_name,
-        StatementId=f'api-{method}',
+        StatementId=f'api-{method}-{function_name}',
         Action='lambda:InvokeFunction',
         Principal='apigateway.amazonaws.com',
-        SourceArn=f'arn:aws:execute-api:us-east-1:*:{api_id}/*/{method}/incident'
+        SourceArn=f'arn:aws:execute-api:us-east-1:135808961985:{api_id}/*/{method}/incident'
     )
 
 add_lambda_route('CreateIncident', 'POST')
 add_lambda_route('GetIncidents', 'GET')
+add_lambda_route('DeleteIncident', 'DELETE')
 
-# Deploy the API
-api.create_deployment(restApiId=api_id, stageName='prod')
 
-print(f"✅ API URL: https://{api_id}.execute-api.us-east-1.amazonaws.com/prod/incident")
+def deploy_api():
+    # Deploy the API
+    api.create_deployment(restApiId=api_id, stageName='prod')
+    print(f"✅ API URL: https://{api_id}.execute-api.us-east-1.amazonaws.com/prod/incident")
