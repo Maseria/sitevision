@@ -46,4 +46,6 @@ def deploy_lambda(name, handler, filename):
             MemorySize=128
         )
 
-
+deploy_lambda('CreateIncident', 'insertincident.lambda_handler', 'lambda/insertincident.py')
+deploy_lambda('GetIncidents', 'getincident.lambda_handler', 'lambda/getincident.py')
+deploy_lambda('DeleteIncident', 'deleteincident.lambda_handler', 'lambda/deleteincident.py')

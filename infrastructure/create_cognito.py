@@ -17,3 +17,5 @@ def setup_user_pool():
     print("✅ User Pool ID:", pool_id)
     print("✅ Client ID:", client_id)
     return pool_id, client_id
+
+setup_user_pool()

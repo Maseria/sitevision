@@ -13,3 +13,6 @@ def create_incident_table():
         print("✅ Incidents table created.")
     except dynamodb.exceptions.ResourceInUseException:
         print("⚠️ Table already exists.")
+
+
+create_incident_table()
