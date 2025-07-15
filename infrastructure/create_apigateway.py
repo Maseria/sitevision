@@ -54,3 +54,4 @@ def deploy_api():
     # Deploy the API
     api.create_deployment(restApiId=api_id, stageName='prod')
     print(f"✅ API URL: https://{api_id}.execute-api.us-east-1.amazonaws.com/prod/incident")
+

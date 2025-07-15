@@ -7,8 +7,10 @@ def zip_lambda(source_file, zip_name):
 iam = boto3.client('iam')
 lambda_client = boto3.client('lambda')
 
+rolename = input("Enter a role name to deploy lambda")
+
 role = iam.create_role(
-    RoleName='SiteVisionLambdaRole',
+    RoleName=f'rolename',
     AssumeRolePolicyDocument=json.dumps({
         "Version": "2012-10-17",
         "Statement": [{
@@ -20,11 +22,11 @@ role = iam.create_role(
 )
 
 iam.attach_role_policy(
-    RoleName='SiteVisionLambdaRole',
+    RoleName=f'{rolename}',
     PolicyArn='arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess'
 )
 iam.attach_role_policy(
-    RoleName='SiteVisionLambdaRole',
+    RoleName=f'{rolename}',
     PolicyArn='arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
 )
 
@@ -44,6 +46,3 @@ def deploy_lambda(name, handler, filename):
             MemorySize=128
         )
 
-deploy_lambda('CreateIncident', 'insertincident.lambda_handler', 'lambda/insertincident.py')
-deploy_lambda('GetIncidents', 'getincident.lambda_handler', 'lambda/getincident.py')
-deploy_lambda('DeleteIncident', 'deleteincident.lambda_handler', 'lambda/deleteincident.py')
